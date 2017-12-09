@@ -23,7 +23,7 @@ spec:
               command: ["/up.sh"]
           preStop:
             exec:
-              command: ["/down.sh"]        
+              command: ["/down.sh"]
         ports:
         - containerPort: 3000
           name: puzzle
@@ -91,7 +91,7 @@ spec:
     serviceName: puzzle
     servicePort: 3000
   rules:
-  - host: puzzle.192.168.99.100.xip.io
+  - host: puzzle.192.168.99.102.xip.io
     http:
       paths:
       - path: /
