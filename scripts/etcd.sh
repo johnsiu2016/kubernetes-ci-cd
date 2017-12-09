@@ -4,12 +4,6 @@ echo "installing etcd operator"
 kubectl  create -f manifests/deployment.yaml
 kubectl  rollout status -f manifests/deployment.yaml
 
-until kubectl  get thirdpartyresource cluster.etcd.coreos.com
-do
-    echo "waiting for operator"
-    sleep 2
-done
-
 echo "pausing for 10 seconds for operator to settle"
 sleep 10
 
